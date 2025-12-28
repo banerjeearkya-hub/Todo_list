@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A beautiful and functional todo list application to organize your daily tasks"
+    />
+    <title>My Todo List - Stay Organized</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-card">
+        <div class="input-section">
+          <input
+            type="text"
+            id="todoInput"
+            class="todo-input"
+            placeholder="Add a new task..."
+            aria-label="Todo input field"
+          />
+          <button id="addBtn" class="add-btn" aria-label="Add todo">Add</button>
+        </div>
+
+            <div class="controls-section" id="controlsSection">
+                <button id="selectAllBtn" class="control-btn" aria-label="Select all todos">
+                    Select All
+                </button>
+                <button id="deleteSelectedBtn" class="control-btn delete-selected-btn" aria-label="Delete selected todos">
+                    Delete Selected (<span id="selectedCount">0</span>)
+                </button>
+            </div>
+            
+        <div id="todoList" class="todo-list"></div>
+            
+            <div class="trash-section" id="trashSection">
+                <div class="trash-header" id="trashHeader">
+                    <h3 class="trash-title">
+                        🗑️ Trash (<span id="trashCount">0</span>)
+                    </h3>
+                    <button id="clearTrashBtn" class="clear-trash-btn" aria-label="Clear trash permanently">
+                        Clear All
+                    </button>
+                </div>
+                <div id="trashList" class="trash-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
